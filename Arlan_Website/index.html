@@ -3,49 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portfolio - Your Name</title>
+  <title>Rey Jun Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <aside class="sidebar">
-    <div class="profile-image-container">
-      <img
-        src="image/profile.jpg"
-        alt="Portrait of a young man wearing sunglasses and black clothing standing on a sandy beach with blue sky and ocean in background"
-        class="profile-image"
-      />
-    </div>
-    <h1 class="name">Rey Jun Arlan</h1>
-    <p class="subtitle">Web Developer & Designer</p>
-    <nav class="nav-links">
-      <a href="#" class="nav-link active">Home</a>
-      <a href="#" class="nav-link">About</a>
-      <a href="#" class="nav-link">Services</a>
-      <a href="#" class="nav-link">Portfolio</a>
-      <a href="#" class="nav-link">Contact</a>
+  <header class="header">
+    <nav class="navbar container">
+      <div class="logo">ARLAN</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Works</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <button class="btn primary-btn">Let's Talk</button>
     </nav>
-    <footer class="footer-text">
-      <p>© 2024 Rey Jun Arlan. All rights reserved.</p>
-      <p>This site is designed with care.</p>
-    </footer>
-  </aside>
+  </header>
 
-  <main class="main-content">
-    <div class="intro-text">
-      <h2 class="greeting">Hello, I am</h2>
-      <h1 class="title">Rey Jun Arlan</h1>
-      <p class="description">
-        A passionate Web Developer crafting beautiful and functional websites.
-      </p>
-      <button class="btn-portfolio" id="btnPortfolio">View Portfolio</button>
-    </div>
-    <div class="main-image-wrapper">
-      <img
-        src="image/profile.jpg"
-        alt="Side profile of a young man wearing a black coat and white hoodie looking down on a white background"
-        class="main-image"
-      />
-    </div>
+  <main>
+    <section class="hero container">
+      <div class="hero-text">
+        <h1>Hi There, I Am Rey Jun</h1>
+        <h2>Creative Director</h2>
+        <button class="btn outlined-btn">View Works</button>
+      </div>
+      <div class="hero-image">
+        <img src="image/my-img.jpg"/>
+      </div>
+    </section>
   </main>
 
   <script src="script.js"></script>
