@@ -1,212 +1,169 @@
-/* Reset and base */
+/* Reset & base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #1e1e1e;
-}
-
-body, html {
-  height: 100%;
-  background: #fff;
-  display: flex;
-  min-height: 100vh;
-}
-
-/* Sidebar */
-.sidebar {
-  width: 280px;
-  background-color: #f3f6fa;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem 1.5rem;
-  border-right: 1px solid #d6dce9;
-}
-
-.profile-image-container {
-  width: 140px;
-  height: 140px;
-  margin-bottom: 1rem;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 3px solid #8facd9;
-}
-
-.profile-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.name {
-  font-weight: 700;
-  font-size: 1.4rem;
-  margin-bottom: 0.25rem;
-  text-align: center;
-}
-
-.subtitle {
-  font-weight: 400;
-  font-size: 0.9rem;
-  color: #65768d;
-  margin-bottom: 1.5rem;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-}
-
-/* Navigation */
-.nav-links {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 0.6rem;
-  margin-bottom: auto;
-}
-
-.nav-link {
-  color: #65768d;
-  font-weight: 500;
-  text-decoration: none;
-  font-size: 0.9rem;
-  padding: 0.3rem 0.8rem;
-  border-radius: 4px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  text-align: center;
-  cursor: pointer;
-}
-
-.nav-link:hover,
-.nav-link.active {
-  background-color: #8facd9;
-  color: white;
-}
-
-/* Footer inside sidebar */
-.footer-text {
-  font-size: 0.75rem;
-  color: #9ea7b8;
-  text-align: center;
-  margin-top: 2rem;
-  line-height: 1.2;
-}
-
-/* Main content */
-.main-content {
-  flex: 1;
-  display: flex;
-  padding: 3rem;
-  gap: 3rem;
-  align-items: center;
-  justify-content: space-between;
-  overflow: hidden;
-}
-
-.intro-text {
-  max-width: 480px;
-}
-
-.greeting {
-  font-weight: 400;
-  font-size: 1.5rem;
-  color: #464646;
-  margin-bottom: 0.3rem;
-}
-
-.title {
-  font-size: 3rem;
-  font-weight: 900;
-  line-height: 1.1;
-  margin-bottom: 1rem;
-  color: #121212;
-}
-
-.description {
-  font-size: 1.1rem;
-  color: #575757;
-  margin-bottom: 2rem;
+  background-color: #3f2c2c;
+  color: #f5f5f5;
   line-height: 1.5;
 }
 
-.btn-portfolio {
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header & Navigation */
+
+.header {
+  background-color: #3f2c2c;
+  border-bottom: 1px solid #926d4d;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #cfa071;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #d7b08d;
+}
+
+.nav-links a {
+  color: #d7b08d;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  color: #cfa071;
+}
+
+.btn {
+  cursor: pointer;
   font-weight: 600;
   font-size: 0.95rem;
-  background-color: white;
-  border: 2px solid #8facd9;
-  color: #8facd9;
-  padding: 0.6rem 1.6rem;
+  border-radius: 3px;
+  padding: 8px 18px;
+  border: 1px solid transparent;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Primary button - lets talk */
+.primary-btn {
+  background-color: #cfa071;
+  color: #3f2c2c;
+  border-color: #cfa071;
+}
+
+.primary-btn:hover,
+.primary-btn:focus {
+  background-color: transparent;
+  color: #cfa071;
+}
+
+/* Outlined button for view works */
+.outlined-btn {
+  background-color: transparent;
+  color: #cfa071;
+  border: 1px solid #cfa071;
+}
+
+.outlined-btn:hover,
+.outlined-btn:focus {
+  background-color: #cfa071;
+  color: #3f2c2c;
+}
+
+/* Hero section */
+
+.hero {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  color: #f5f5f5;
+  min-height: 500px;
+  background: linear-gradient(45deg, #3f2c2c 0%, #301f1f 100%);
   border-radius: 6px;
-  cursor: pointer;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 40px 60px;
 }
 
-.btn-portfolio:hover {
-  background-color: #8facd9;
-  color: white;
+.hero-text {
+  max-width: 600px;
 }
 
-/* Main image on right */
-.main-image-wrapper {
-  flex-shrink: 0;
-  max-width: 360px;
+.hero-text h1 {
+  font-size: 3.2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #f5f5f5;
+}
+
+.hero-text h2 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #cfa071;
+  margin-bottom: 24px;
+}
+
+.hero-image img {
+  border-radius: 6px;
+  max-width: 380px;
   max-height: 480px;
-  overflow: hidden;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(143, 172, 217, 0.3);
-}
-
-.main-image {
-  width: 100%;
-  height: 100%;
   object-fit: cover;
-  display: block;
+  box-shadow: 0 6px 20px rgba(207,160,113,0.3);
 }
 
 /* Responsive */
+
 @media (max-width: 900px) {
-  body {
+  .hero {
     flex-direction: column;
-  }
-  .sidebar {
-    width: 100%;
-    flex-direction: row;
-    padding: 1rem 2rem;
-    justify-content: space-between;
-    border-right: none;
-    border-bottom: 1px solid #d6dce9;
-  }
-  .profile-image-container {
-    width: 60px;
-    height: 60px;
-  }
-  .name, .subtitle {
-    display: none;
-  }
-  .nav-links {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 0;
-  }
-  .footer-text {
-    display: none;
-  }
-  .main-content {
-    padding: 2rem 1.5rem;
-    flex-direction: column;
-    align-items: center;
-  }
-  .intro-text {
-    max-width: 100%;
+    padding: 30px 20px;
     text-align: center;
-    margin-bottom: 2.5rem;
+    min-height: auto;
   }
-  .main-image-wrapper {
-    max-width: 90vw;
-    max-height: 400px;
+
+  .hero-text h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero-text h2 {
+    font-size: 2rem;
+  }
+
+  .hero-image img {
+    max-width: 300px;
+    max-height: 380px;
+    margin-top: 30px;
+  }
+
+  .nav-links {
+    display: none; /* No mobile nav functionality here */
+  }
+
+  .btn.primary-btn {
+    display: none;
   }
 }
